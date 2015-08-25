@@ -6,7 +6,7 @@ require 'quicksort_median_of_three/version'
 Gem::Specification.new do |spec|
   spec.name          = "quicksort_median_of_three"
   spec.version       = QuicksortMedianOfThree::VERSION
-  spec.authors       = ["IuliiaKot"]
+  spec.authors       = ["Iuliia Kotlenko"]
   spec.email         = ["kotlenko.julia@gmail.com"]
 
   spec.summary       = %q{Quicksort algorithm}

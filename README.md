@@ -14,6 +14,7 @@ The steps are:
 There are some ways how you can choose a pivot element: the first element, the last element or random element.
 
 Bur Sedgewick suggested some optimizations:
+
     1. Pivot element is median-of-three.
     2.To make sure at most O(log n) space is used, recurse first into the smaller side of the partition, then use a tail call to recurse into the other.
     3.Use insertion sort, which has a smaller constant factor and is thus faster on small arrays, for invocations on small arrays (i.e. where the length is less than a threshold k determined experimentally). This can be implemented by simply stopping the recursion when less than k elements are left, leaving the entire array k-sorted: each element will be at most k positions away from its final position. Then, a single insertion sort pass[13]:117 finishes the sort in O(kn) time. A separate insertion sort of each small segment as they are identified adds the overhead of starting and stopping many small sorts, but avoids wasting effort comparing keys across the many segment boundaries, where keys will be in order due to the workings of the quicksort process.
@@ -37,7 +38,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+  ```
+  a = [9,34,8,0,1,23,56,87,45]
+  Sort.quicksort(a, 0, a.length_1)
+  method quicksort takes 3 arguments: array, index on the first element, index on the last element
+  ```
 
 ## Development
 
