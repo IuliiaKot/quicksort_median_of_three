@@ -43,6 +43,7 @@ Or install it yourself as:
 ## Usage
 
   ```
+  required 'quicksort_median_of_three'
   a = [9,34,8,0,1,23,56,87,45]
   Sort.quicksort(a, 0, a.length_1)
   method quicksort takes 3 arguments: array, index on the first element, index on the last element
