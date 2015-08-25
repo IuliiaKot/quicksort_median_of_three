@@ -9,17 +9,17 @@ Quicksort is a divide and conquer algorithm. Quicksort first divides a large arr
 
 The steps are:
 
-1.Pick an element, called a pivot, from the array.
-2.Reorder the array so that all elements with values less than the pivot come before the pivot, while all elements with values greater than the pivot come after it (equal values can go either way). After this partitioning, the pivot is in its final position. This is called the partition operation.
-3.Recursively apply the above steps to the sub-array of elements with smaller values and separately to the sub-array of elements with greater values.
+1. Pick an element, called a pivot, from the array.
+2. Reorder the array so that all elements with values less than the pivot come before the pivot, while all elements with values greater than the pivot come after it (equal values can go either way). After this partitioning, the pivot is in its final position. This is called the partition operation.
+3. Recursively apply the above steps to the sub-array of elements with smaller values and separately to the sub-array of elements with greater values.
 
 There are some ways how you can choose a pivot element: the first element, the last element or random element.
 
 Bur Sedgewick suggested some optimizations:
 
-1.Pivot element is median-of-three.
-2.To make sure at most O(log n) space is used, recurse first into the smaller side of the partition, then use a tail call to recurse into the other.
-3.Use insertion sort, which has a smaller constant factor and is thus faster on small arrays, for invocations on small arrays
+1. Pivot element is median-of-three.
+2. To make sure at most O(log n) space is used, recurse first into the smaller side of the partition, then use a tail call to recurse into the other.
+3. Use insertion sort, which has a smaller constant factor and is thus faster on small arrays, for invocations on small arrays
 (i.e. where the length is less than a threshold k determined experimentally). This can be implemented by simply stopping the recursion
 when less than k elements are left, leaving the entire array k-sorted: each element will be at most k positions away from its final position. Then, a single insertion sort pass finishes the sort in O(kn) time. A separate insertion sort of each small segment as they are identified adds the overhead of starting and stopping many small sorts, but avoids wasting effort comparing keys across the many segment boundaries, where keys will be in order due to the workings of the quicksort process.
 
