@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["kotlenko.julia@gmail.com"]
 
   spec.summary       = %q{Quicksort algorithm}
-   spec.description   = %q{Quicksort algorithm with optimisations.}
-   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.description   = %q{Quicksort algorithm with optimisations.}
+  spec.homepage      = "https://github.com/IuliiaKot/quicksort_median_of_three"
 
    # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
    # delete this section to allow pushing this gem to any host.
